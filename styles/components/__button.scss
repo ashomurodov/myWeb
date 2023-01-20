@@ -1,0 +1,58 @@
+$bigButton__font_size: clamp(1.5rem, 3.2vw, 2.6rem);
+
+button,
+.nav-btn {
+  background-color: none;
+  border: 2px solid $dark__color;
+  border-radius: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input {
+  padding: 1.6rem 2.6rem;
+  border-radius: 5px;
+  background-color: none;
+  outline: none;
+  border: 2px solid $pcolor;
+  width: 270px;
+  height: 65px;
+}
+
+::placeholder {
+  color: $pcolor;
+}
+
+.nav-btn {
+  padding: 12px 40px;
+  font-size: 2.4rem;
+  &:hover {
+    background-color: $dark__color;
+    color: #fff;
+  }
+}
+
+.big-btn {
+  font-size: $bigButton__font_size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 65px;
+}
+
+@mixin btn($Btype, $bgcolor: dark, $color: light) {
+  .btn-#{$Btype} {
+    color: $color;
+    background-color: $bgcolor;
+  }
+}
+
+@include btn(light, white, $dark__color);
+@include btn(dark, $dark__color, white);
+
+.btn-dark:hover {
+  background-color: #fff !important;
+  color: $dark__color !important;
+}

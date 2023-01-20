@@ -1,0 +1,85 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 1.5rem;
+  margin-bottom: 8rem;
+  .section-title {
+    margin-bottom: 2rem;
+    @include tablet {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include tablet {
+    display: block;
+    padding: 0rem 6rem;
+  }
+
+  @include miniDesk {
+    padding: 0px 6rem;
+  }
+
+  .about__section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+    @include tablet {
+      width: 100%;
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between !important;
+    }
+    &--left {
+      text-align: center;
+      @include tablet {
+        width: 60%;
+        text-align: start;
+      }
+
+      .aboutUs_counter {
+        gap: 35px;
+        display: flex;
+        flex-direction: column;
+        h1 {
+          font-size: 3rem;
+        }
+        &-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        @include mobile {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    &--right {
+      img {
+        width: 95%;
+        margin: auto;
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+
+      @include tablet {
+        width: 45%;
+        img {
+          height: auto;
+          width: 66%;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+  // .about__section--left{
+
+  // }
+}

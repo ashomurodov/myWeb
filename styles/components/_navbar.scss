@@ -1,0 +1,60 @@
+$logo__fontsize: clamp(2.4rem, 3vw, 3.6rem);
+
+a {
+  text-decoration: none;
+  color: $dark__color;
+  transition: 0.3s all ease;
+  &:hover {
+    color: $pcolor;
+  }
+}
+
+.navbar {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  height: 80px;
+  padding: 4rem 1rem;
+  position: relative;
+
+  @include mobile {
+    padding: 5rem 3rem;
+  }
+
+  @include tablet{
+    padding: 6rem 6rem 4rem 6rem
+  }
+
+  &__logo {
+    font-size: $logo__fontsize;
+    span {
+      color: $pcolor;
+    }
+  }
+
+  &__bars {
+    opacity: 1;
+    color: $dark__color;
+    font-size: 3rem;
+
+    @include miniDesk {
+      opacity: 0;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    display: none;
+    .nav-btn {
+      margin-left: 80px;
+    }
+
+    @include miniDesk {
+      display: flex;
+    }
+  }
+}

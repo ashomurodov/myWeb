@@ -1,0 +1,111 @@
+.contact {
+  .hidden-title {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .first-title {
+    display: block;
+    @include tablet {
+      display: none;
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 2rem;
+  margin-bottom: 6rem;
+
+  @include mobile {
+    padding: 0px 2.5rem;
+  }
+
+  @include tablet {
+    padding: 0px 6rem;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+
+    &--left {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 68%;
+        margin-bottom: 5rem;
+      }
+    }
+
+    &--right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.4rem;
+      text-align: center;
+
+      .button__section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include mobile {
+          flex-direction: row;
+          gap: 0;
+          position: relative;
+          width: 90%;
+
+          input {
+            width: 100%;
+          }
+
+          button {
+            position: absolute;
+            right: 0;
+            width: 200px;
+          }
+        }
+
+        @include tablet {
+          gap: 1.5rem;
+          button {
+            position: relative;
+            width: 230px;
+          }
+        }
+
+        .big-btn {
+          border-radius: 10px;
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      .section-title {
+        margin-bottom: 0;
+      }
+      &--right {
+        align-items: flex-start;
+        text-align: start;
+        width: 50%;
+      }
+
+      &--left{
+        width: 40%;
+        img{
+            width: 90%;
+            margin-bottom: unset;
+        }
+      }
+    }
+  }
+}

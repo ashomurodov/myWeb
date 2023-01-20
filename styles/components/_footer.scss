@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  font-size: $pfontsize;
+  margin-bottom: 5rem;
+  hr {
+    background-color: $pcolor;
+    height: 1px;
+    border: none;
+    margin-bottom: 3.5rem;
+  }
+  padding: 0px 2rem;
+
+  @include mobile {
+    padding: 0px 4rem;
+  }
+
+  @include tablet {
+    padding: 0px 7rem;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    img {
+      margin-bottom: 2rem;
+    }
+
+    @include mobile {
+      flex-direction: row;
+    }
+  }
+}

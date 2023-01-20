@@ -1,0 +1,51 @@
+@import "./fonts/fonts";
+@import "./components/variable";
+@import "./components/_button";
+@import "./components/_mediaQuery";
+@import "./components/navbar";
+@import "./components/showcase";
+@import "./components/skils";
+@import "./components/about";
+@import "./components/pricing";
+@import "./components/contact";
+@import "./components/footer";
+
+
+
+// $colors: (
+//   "light": #ffffff,
+//   "success": #008000,
+//   "warn": #edb014,
+//   "info": #2d30ec,
+// );
+
+// $prefixes: (
+//   "bg": background,
+//   "color": color,
+// );
+
+// @mixin loop($prefix) {
+//   $prop: map-get($prefixes, $prefix);
+//   @each $key, $value in $colors {
+//     .#{$prefix}-#{$key} {
+//       #{$prop}: $value;
+//     }
+//   }
+// }
+
+// @include loop(bg);
+// @include loop(color);
+
+// $fontSizes: (
+//   "size1": 1rem,
+//   "size1.5": 1.5rem,
+//   "size1.8": 1.8rem,
+//   "size2": 2rem,
+//   "size4": 4rem,
+// );
+
+// $fName: (
+//   "font": font-size,
+// );
+
+// @mixin btnStyle()

@@ -1,0 +1,63 @@
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 1.5rem;
+  margin-bottom: 9rem;
+
+  @include tablet {
+    padding: 0px 6rem;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    @include miniDesk {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    &--item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      @include miniDesk {
+        align-items: flex-start;
+        text-align: start;
+      }
+
+      span {
+        background-color: $bgmilk__color;
+        padding: 1rem 2rem;
+        font-size: 2.2rem;
+        display: flex;
+        align-items: center;
+        span {
+          font-size: 1.3rem;
+          color: $pcolor;
+        }
+      }
+
+      img {
+        width: 70%;
+        margin-bottom: 3.5rem;
+
+        @include tablet {
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0rem auto 3.5rem auto;
+        }
+
+        @include miniDesk {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
